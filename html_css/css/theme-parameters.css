@@ -1,0 +1,35 @@
+:root {
+    --main-font-name: 'Roboto', sans-serif;
+    --fonts-color: rgb(46, 43, 43);
+
+    --main-color: rgb(247, 181, 0);
+    
+    --small-fonts: 12px;
+    --medium-fonts: 14px;
+    --large-fonts: 16px;
+    --extra-fonts: 20px;
+
+    /* Holy grail colors */
+
+    --header-color: #E0E0E0;
+    --side-nav-color: #FCCBA1;
+    --footer-color:  #555555;
+
+    --mid-content-color: #66A1DD;
+    --lower-content-color: #FF7C00;
+    
+    --up-inner-panel-left-color: #919191;
+    --up-inner-panel-center-color: #FF2600;
+    --up-inner-panel-right-color: #d39696;
+
+
+    /* block default size */
+    /* width */
+
+    /* height*/
+    --menu-height: 70px;
+    --content-main-area-height: 550px; 
+    --article-area-height: 200px;
+    --footer-height: 150px;
+    
+}

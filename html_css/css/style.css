@@ -1,0 +1,5 @@
+@import './theme-parameters.css';
+
+/* Page style */
+@import './main-theme.css';
+@import './page-default-structure.css';
