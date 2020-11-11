@@ -1,0 +1,19 @@
+.middle-content-area .shop-items {
+    display: flex;
+    flex-wrap: wrap; 
+}
+
+.middle-content-area .shop-items .single-shop-card {
+    width: calc(100% / 4);
+}
+.single-shop-card {
+    padding: 5px;
+    box-sizing: border-box;
+}
+.single-shop-card .card-inner {
+    background: white;
+    padding: 5px;
+}
+.single-shop-card img {
+    width: 100%;
+}

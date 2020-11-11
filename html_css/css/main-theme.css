@@ -6,6 +6,15 @@ body {
     margin: 0;
     padding: 0;
 }
+body {
+    background-image: url("../public/image/backgrounds/dark-wooden-room-space-background-light-bulb_64749-824.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100px 500px;
+    background-position-x: 200px;
+    background-position-y: 300px;
+    background-position: center;  /* top right bottom left */
+}
 
 div {
     color: #4f9d00;
@@ -44,4 +53,26 @@ main section div p.large-text-decorator {
 .main-container {
     max-width: 1200px;
     margin: 0 auto;
+    overflow: auto;
+}
+.round-container {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #bbbbbb;
+    margin: 0 auto;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.round-container.round-image-1 {
+    background-image: url("../public/image/backgrounds/city.jpg");
+}
+.round-container.round-image-2 {
+    background-image: url("https://i.pinimg.com/originals/5e/d4/04/5ed404b97ad95cae88a20b322faf2761.gif");
+}
+.round-container.round-image-3 {
+    background-image: url("https://image.freepik.com/free-photo/headphones-dark-black-background_68747-106.jpg");
 }

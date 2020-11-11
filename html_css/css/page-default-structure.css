@@ -1,12 +1,100 @@
 .main-header-wrapper {
     background: var(--header-color);
     min-height: var(--menu-height);
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    top: 0;
 }
 .nav-side-panel {
     background: var(--side-nav-color);
 }
+.main-header-wrapper .main-container ul.manu-wrapper {
+    list-style: none;
+    display: flex;
+    float: right;
+}
+.main-header-wrapper .main-container ul.manu-wrapper a.selected,
+.main-header-wrapper .main-container ul.manu-wrapper a:hover {
+    background: rgb(128, 0, 0);
+    color: #ffffff;
+}
+.main-header-wrapper .main-container ul.manu-wrapper a {
+    padding: 20px;
+}
+.main-header-wrapper .page-logo {
+    background-image: url("../public/icons/iconfinder_Sith_Empire_logo_star_wars_3151559.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 62px;
+    height: 59px;
+    display: inline-block;
+}
+.main-header-wrapper .logo-link {
+    width: 50px;
+    display: inline-block;
+    height: 50px;
+}
 
+body .page-banner {
+    background: #70A3B8;
+    background-image: url("../public/image/backgrounds/city.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 650px;
+    overflow: auto;
+    margin-top: var(--menu-height);
+    align-items: center;
+    display: flex;
+}
 
+body .page-banner .banner-article {
+    width: 300px;
+    color: #ffffff;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.616);
+    background: #00000094;
+    padding: 30px;
+    padding-top: 50px;
+    padding-right: 20px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+
+    padding: 50px 20px 15px 10px;
+    margin: 30px;
+
+    border-radius: 15px;
+    border-radius: 5px 50% 20px 10%;
+    box-shadow: 5px 13px 22px #d7000091;
+    /*opacity: 0;*/
+}
+/* margin - зовнішній відступ*/
+/*padding - внутрішній відступ*/
+body .page-banner .banner-article button,
+.middle-content-area .shop-items .single-shop-card a.card-btn {
+    padding: 15px;
+    min-width: 45%;
+    background: rgb(114, 0, 0);
+    color: #ffffff;
+    border: 0;
+    border: 2px solid rgb(174, 47, 18);
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 50%;
+    border-radius: 25px;
+    top: 30px;
+    left: -30px;
+    cursor: pointer;
+    display: block;
+    position: relative;
+}
+body .page-banner .banner-article button:active,
+.middle-content-area .shop-items .single-shop-card a.card-btn:active {
+    background: rgb(255, 250, 250);
+    color: rgb(114, 0, 0);
+}
 
 /* upper inner content ( 3 items under the header in view )*/
 
