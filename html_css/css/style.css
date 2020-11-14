@@ -4,3 +4,8 @@
 @import './main-theme.css';
 @import './page-default-structure.css';
 @import './shop-items.css';
+
+/* response */
+
+@import './response-960px.css';
+@import './response-650px.css';

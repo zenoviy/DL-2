@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;700;900&display=swap');
+/*
+    Додав шрифти щоб покращити візуальне сприйняття
+*/
+
+
+
+:root {
+    --main-background: #000;
+    --side-width: 300px;
+    --cube-border-color: #1d1b1b;
+
+
+    --color-of-fonts: #ffffff;
+    --fonts-weight: bold;
+
+    --cube-side-1: rgba(255, 0, 0, 0.446) ;
+    --cube-side-2: rgba(0, 0, 255, 0.419) ;
+    --cube-side-3: rgba(0, 128, 0, 0.549) ;
+    --cube-side-4: rgba(255, 255, 0, 0.412) ;
+    --cube-side-5: rgba(255, 166, 0, 0.453) ;
+    --cube-side-6: rgba(187, 0, 125, 0.419) ;
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: var(--main-background);
+}
+
+
+.cube-wrapper {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+}
+
+.cube-view-area {
+    transform-style: preserve-3d;
+    position: absolute;
+    transform: rotateX(60deg) rotateY(30deg) rotateZ(45deg);
+    width: var(--side-width);
+    height: var(--side-width);
+}
+
+
+.side p {
+    display: flex;
+    align-content: center;  
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}  
+
+.side {
+    width: var(--side-width);
+    height: var(--side-width);
+    border: 1px solid var(--cube-border-color);
+    box-sizing: border-box;
+    color: #ffffff;
+    position: absolute;
+    display: flex;  /*   display flex щоб відцентрувати тести  в сторонах */
+    justify-content: center; /* центрування текстів по горизонталі */
+    align-content: center;  /* центрування елементва по вертекалі */
+}
+.cube-side-1 {
+    background: var(--cube-side-1);
+    transform: rotateY(180deg) translate3d(0px, 0px, 150px);
+}
+.cube-side-2 {
+    background: var(--cube-side-2);
+    transform: rotateY(0deg) translate3d(0px, 0px, 150px);
+}
+.cube-side-3 {
+    background: var(--cube-side-3);
+    transform: rotateX(-90deg) translate3d(0px, 0px, 150px);
+}
+.cube-side-4 {
+    background: var(--cube-side-4);
+    transform: rotateX(90deg) translate3d(0px, 0px, 150px);
+}
+.cube-side-5 {
+    background: var(--cube-side-5);
+    transform: rotateY(90deg) translate3d(0px, 0px, 150px);
+}
+.cube-side-6 {
+    background: var(--cube-side-6);
+    transform: rotateY(-90deg) translate3d(0px, 0px, 150px);
+}
+
+.cube-rotation-animation {
+    animation:  cube-rotation 20s infinite linear;      /*  змінив час до 20 секунд для того щоб анімація була плавна  */
+}
+
+@keyframes cube-rotation {
+    0% { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+    100% { transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg); }
+}

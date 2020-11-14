@@ -1,0 +1,34 @@
+@media screen and (max-width: 650px){
+    body .page-banner {
+        margin-top: 0;
+    }
+    .main-header-wrapper {
+        position: relative;
+    }
+    .main-header-wrapper .main-container ul.manu-wrapper {
+        display: block;
+        float: none;
+        padding: 0px;
+        overflow: hidden;
+    }
+    .main-header-wrapper .main-container ul.manu-wrapper a.selected, 
+    .main-header-wrapper .main-container ul.manu-wrapper a:hover,
+    .main-header-wrapper .main-container ul.manu-wrapper li a {
+        text-align: center ;
+        width: 100%;
+        display: inline-block;
+    }
+    
+    .page-body-wrapper nav#nav-side-panel {
+        display: none;
+    }
+    
+    .page-body-wrapper nav#nav-side-panel, 
+    .page-body-wrapper aside.side-panel,
+    .page-body-wrapper .page-body-central-content {
+        width: 100%;
+    }
+    .middle-content-area .shop-items .single-shop-card {
+        width: calc(100% / 2);
+    }
+}

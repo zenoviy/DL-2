@@ -1,0 +1,5 @@
+@media screen and (max-width: 960px){ 
+    .page-body-wrapper aside.side-panel {
+        background: rgb(145, 0, 14);
+    }
+}

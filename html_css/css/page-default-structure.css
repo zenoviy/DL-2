@@ -72,7 +72,8 @@ body .page-banner .banner-article {
 /* margin - зовнішній відступ*/
 /*padding - внутрішній відступ*/
 body .page-banner .banner-article button,
-.middle-content-area .shop-items .single-shop-card a.card-btn {
+.middle-content-area .shop-items .single-shop-card a.card-btn,
+.page-body-central-content .main-btn {
     padding: 15px;
     min-width: 45%;
     background: rgb(114, 0, 0);
@@ -91,9 +92,17 @@ body .page-banner .banner-article button,
     position: relative;
 }
 body .page-banner .banner-article button:active,
-.middle-content-area .shop-items .single-shop-card a.card-btn:active {
+.middle-content-area .shop-items .single-shop-card a.card-btn:active,
+.page-body-central-content .main-btn:active
+{
     background: rgb(255, 250, 250);
     color: rgb(114, 0, 0);
+}
+
+.page-body-central-content .main-btn {
+    left: 0;
+    top: 0;
+    margin: 0 auto;
 }
 
 /* upper inner content ( 3 items under the header in view )*/
@@ -124,6 +133,151 @@ body .page-banner .banner-article button:active,
 .page-body-wrapper .page-body-central-content {
     width: 60%;
 }
+.lower-content-area .gradient-area {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 10px;
+    padding: 10px;
+}
+.lower-content-area .box {
+    height: 200px;
+    background: #bbb;
+}
+.lower-content-area .box.linear-gradient {
+    background: linear-gradient(235deg, 
+    #30f23a 0%,
+    #197f18 26%,
+    #fcda2f 38%,
+    #ffe628 65%,
+    #f28284 100%);
+}
+.lower-content-area .radial-gradient {
+    background: radial-gradient(ellipse at center, 
+    #30f23a 0%,
+    #197f18 26%,
+    #fcda2f 38%,
+    #ffe628 65%,
+    #f28284 100%);
+}
+.image-filter-area {
+    padding: 10px;
+}
+.image-filter-area .city-image {
+    width: 100%;
+    background-image: url("../public/image/backgrounds/city.jpg");
+    background-size: cover;
+    background-position: center;
+    min-height: 200px;
+    z-index: 1;
+    position: relative;
+    transition: all .5s cubic-bezier(1,.04,0,.6);
+}
+.image-filter-area .block-blur {
+    filter: blur(5px);
+    transition: all .5s cubic-bezier(1,.04,0,.6);
+}
+.image-filter-area .block-sepia {
+    filter: sepia(100%);
+}
+.image-filter-area .block-hue-rotate {
+    filter: hue-rotate(180deg) saturate(0);
+    transition: all .5s linear;
+}
+.image-filter-area .block-invert {
+    filter: invert( .8);
+    transition: all .5s linear;
+}
+.image-filter-area .block-opacity {
+    filter: opacity(30%);
+}
+
+.pseudo-text-area p:first-child {
+    color: rgb(255, 255, 255);
+}
+.pseudo-text-area p:last-child {
+    color: rgb(255, 132, 0);
+}
+.pseudo-text-area p::first-letter {
+    color: red;
+    background: black;
+    padding: 2px;
+}
+.pseudo-text-area p.first-text::after {
+    content: "$ i am after";
+    color: red;
+}
+.pseudo-text-area p.first-text::before {
+    content: "$ i am before";
+    color: rgb(70, 0, 201);
+}
+
+.pseudo-text-area p:nth-last-child(even) {
+    background: #bbb;
+}
+.list-with-text li{
+    background:#eaa4a4;
+    padding: 10px;
+}
+.list-with-text li:nth-child(odd) {
+    background: rgb(123, 48, 48);
+    color: #ffffff;
+}
+.pseudo-text-area a:link {
+    color: orange;
+}/**/
+.pseudo-text-area a:visited {
+    color: rgb(0, 151, 13);
+}
+.pseudo-text-area {
+    overflow: hidden;
+}
+
+
+/* animations */
+/* 1 - transition */
+/* 2 - keyframes */
+
+.image-filter-area .block-blur:hover {
+    filter: blur(0px);
+    
+}
+.image-filter-area .city-image:hover {
+    transform: scale(1.2);
+    z-index: 5;
+}
+.image-filter-area .block-hue-rotate:hover {
+    filter: hue-rotate(380deg) saturate(10);
+}
+.image-filter-area .block-invert:hover {
+    transform: rotateX(180deg) rotateY(180deg);
+}
+/* transform */
+.pseudo-text-area .box {
+    width: 100%;
+    height: 100px;
+    background: red;
+    border: 10px dashed white;
+    box-sizing: border-box;
+}
+.pseudo-text-area .box.transform-skew {
+    transform: skewX(20deg) skewY(10deg);
+}
+
+
+
+/* keyframe */
+
+.image-filter-area .animation-keyframe {
+    background-position-x: 0%;
+    animation: rotate-animation 5s linear infinite; /*  forwards */
+}
+@keyframes rotate-animation {
+    0% { transform: rotateX(0deg) rotateY(0deg);  background-position-x: 0px;  background-position-y: 0px;}
+    50% { transform: rotateX(-180deg) rotateY(-180deg); }
+    100% { transform: rotateX(180deg) rotateY(180deg); background-position-x: 1000px; background-position-y: 1000px;}
+}
+
+
 
 
 
@@ -147,6 +301,29 @@ body .page-banner .banner-article button:active,
     background: var(--mid-content-color);
     min-height: var(--article-area-height);
 }
+
+
+
+
+
+
+/*  Side panel Cards */
+.side-panel .grid-card-area {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 5px;
+    row-gap: 15px;
+}
+.side-panel .grid-card-area .single-shop-card {
+    overflow: auto;
+}
+.side-panel .grid-card-area .single-shop-card h2,
+.side-panel .grid-card-area .single-shop-card h3,
+.side-panel .grid-card-area .single-shop-card p  {
+    font-size: 0.5rem;   
+}
+
+
 
 
 /* Page footer */

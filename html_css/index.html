@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML + CSS</title>
+
+    <link rel="icon" type="image/png" href="./public/icons/iconfinder_Sith_Empire_logo_star_wars_3151559.png" />
     
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
@@ -74,12 +76,15 @@
             <section class="upper-content-area">
                 <div class="left-inner-panel" style="color: rgb(73, 230, 0); font-size: 33px; font-weight: 600;">#1 Left
                     <span class="round-container round-image-1"></span>
+                    <button class="main-btn">Click me</button>
                 </div>
                 <div class="font-size-medium font-color-dark-orange central-inner-panel">#2 Center
                     <span class="round-container round-image-2"></span>
+                    <input type="button" class="main-btn" value="Click me">
                 </div>
                 <div class="font-size-medium font-color-dark-orange right-inner-panel">#3 Right
                     <span class="round-container round-image-3"></span>
+                    <div class="main-btn">Click me</div>
                 </div>
             </section>
             <section class="middle-content-area">
@@ -146,12 +151,87 @@
                         </div>
                     </div>
                 </div>
-                <div class="lower-content-area">Lower Content 2</div>
+                <div class="lower-content-area">
+                    Lower Content 2
+                    <h1>Gradient</h1>
+                    <div class="gradient-area">
+                        <div class="box linear-gradient"></div>
+                        <div class="box radial-gradient"></div>
+                    </div>
+                    <h1>Filter</h1>
+                    <div class="image-filter-area">
+                        <div class="city-image filter-gray block-blur"></div>
+                        <div class="city-image filter-gray block-sepia"></div>
+                        <div class="city-image filter-gray block-hue-rotate"></div>
+                        <div class="city-image filter-gray block-invert"></div>
+                        <div class="city-image filter-gray block-opacity"></div>
+                        <div class="city-image filter-gray animation-keyframe"></div>
+                    </div>
+                    <h1>Pseudo selectors || pseudoclasses</h1>
+                    <div class="pseudo-text-area">
+                        <p class="first-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                        <p class="second-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                        <p class="second-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                        <p class="second-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                        <p class="third-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                    
+                        <ol class="list-with-text">
+                            <li>first</li>
+                            <li>second</li>
+                            <li>third</li>
+                            <li>fourth</li>
+                            <li>fifth</li>
+                        </ol>
+
+                        <a href="#?id=1">Link 1</a>
+
+                        <h1>transform</h1>
+                        <div class="box transform-skew"></div>
+                    </div>
+               </div>
             </section>
         </div>
         
         <aside class="side-panel font-color-dark-orange ">
             Aside
+            <div class="grid-card-area">
+                <div class="single-shop-card">
+                    <div class="card-inner">
+                        <img src="./public/image/goods/headphones-dark-black-background_68747-106.jpg" alt="headphones">
+                        <h2>Headphome</h2>
+                        <h3>Model A-1 short description</h3>
+                        <p>Detail description of headphone</p>
+                        <a class="card-btn" href="#">Buy</a>
+                    </div>
+                </div>
+                <div class="single-shop-card">
+                    <div class="card-inner">
+                        <img src="./public/image/goods/headphones-dark-black-background_68747-106.jpg" alt="headphones">
+                        <h2>Headphome</h2>
+                        <h3>Model A-1 short description</h3>
+                        <p>Detail description of headphone</p>
+                        <a class="card-btn" href="#">Buy</a>
+                    </div>
+                </div>
+                <div class="single-shop-card">
+                    <div class="card-inner">
+                        <img src="./public/image/goods/headphones-dark-black-background_68747-106.jpg" alt="headphones">
+                        <h2>Headphome</h2>
+                        <h3>Model A-1 short description</h3>
+                        <p>Detail description of headphone</p>
+                        <a class="card-btn" href="#">Buy</a>
+                    </div>
+                </div>
+                <div class="single-shop-card">
+                    <div class="card-inner">
+                        <img src="./public/image/goods/headphones-dark-black-background_68747-106.jpg" alt="headphones">
+                        <h2>Headphome</h2>
+                        <h3>Model A-1 short description</h3>
+                        <p>Detail description of headphone</p>
+                        <a class="card-btn" href="#">Buy</a>
+                    </div>
+                </div>
+            </div>
         </aside>
     </main>
     <footer class="page-footer-wrapper">
@@ -159,6 +239,7 @@
             Footer
             <p class="large-text-decorator">
                 Page style example
+                
             </p>
         </div>
         
