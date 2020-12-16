@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+
+
+</head>
+<style>
+    .box, .red-box {
+        width: 50px;
+        height: 50px;
+        background: red;
+    }
+    .red-box {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .blue-box {
+        background: blue;
+        color: #ffffff;
+    }
+    .green-box {
+        background: rgb(42, 148, 0);
+        color: #ffffff;
+    }
+    .large-box {
+        width: 50%;
+        height: 300px;
+    }
+    .list-item-style {
+        margin-top: 5px;
+        background: #bbbbbb;
+        padding: 5px;
+    }
+    .list-item-style-dark {
+        margin-top: 5px;
+        color: #ffffff;
+        background: #474747;
+        padding: 5px;
+    }
+    .user-single-list img {
+        width: 50px;
+        height: 50px;
+
+    }
+    .user-single-list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+    #main-box {
+
+    }
+</style>
+<body>
+    <h1>Document Object Model</h1>
+    <div id="main-box" class="box secondClass">Text</div>
+
+    <hr>
+    <ul class="main-list">
+        <li class="list-item"><span>#1</span></li>
+        <li class="list-item"><span>#2</span></li>
+        <li class="list-item"><span>#3</span></li>
+        <li class="list-item"><span>#4</span></li>
+        <li class="list-item"><span>#5</span></li>
+    </ul>
+
+    <div class="red-box" id="red-box"></div>
+
+    <h1>User list</h1>
+    <ol id="main-user-list">
+
+    </ol>
+
+<script src="./script.js"></script>
+</body>
+</html>
