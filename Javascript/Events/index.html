@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<style>
+    .clickable-box {
+        width: 100px;
+        height: 40px;
+        background: orange;
+    }
+    .click-btn {
+        color: #fff;
+        padding: 10px;
+        border: 0px;
+        transition: all .2s linear;
+        box-sizing: border-box;
+    }
+    .click-btn:active {
+        border: 2px solid rgb(109, 0, 0);
+    }
+    .red-button {
+        background: red;
+    }
+    .blue-button {
+        background: rgb(55, 0, 255);
+    }
+    .red-box {
+        width: 50px;
+        height: 50px;
+        background: rgb(109, 0, 0);
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .board-wrapper {
+        display: flex;
+        justify-content: center;
+    }
+    .board-wrapper .board-body {
+        width: 80%;
+        height: 300px;
+        background: #000;
+        overflow: hidden;
+        position: relative;
+    }
+    .board-dot {
+        width: 5px;
+        height: 5px;
+        background: orange;
+        position: absolute;
+    }
+</style>
+<body>
+    
+    <button onClick="clickMe('Hello Event')">Click me</button>
+    
+    <div class="clickable-box" onClick="clickableBoxEvent()" onmouseover="boxHoverEvent()">
+        <p>Clicable box</p>
+    </div>
+
+    <button id="minus-btn">-1</button>
+    <span id="dispay-clicks"></span>
+    <button id="plus-btn">+1</button>
+
+    <hr>
+    <h3>Event Listener</h3>
+    <button id="event-listener-btn">Event Listener</button>
+
+    <hr>
+    <p id="mouse-possition-display"></p>
+
+    <hr>
+    <button data-pet-name="cat">Cat</button>
+    <button data-pet-name="dog">Dog</button>
+    <button data-pet-name="lama">Lama</button>
+
+    <hr>
+    <h3>User List</h3>
+    <ol id="user-list-main">
+
+    </ol>
+
+    <div class="red-box" id="red-box"> 
+
+    </div>
+
+    <hr>
+    <h2>Board</h2>
+    <div class="board-wrapper">
+        <div id="board-body" class="board-body"></div>
+    </div>
+
+<script src="./script.js"></script>
+</body>
+</html>
