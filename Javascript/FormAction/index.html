@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <h1>Forms</h1>
+    
+    <h3> Inputs</h3>
+    <div id="input-display-area">
+        <p>
+            No data yet
+        </p>
+    </div>
+
+    <input type="text" id="user-name-input" placeholder="enter you name"> 
+    <select id="city-selector" >
+        <option name="lviv">Lviv</option>
+        <option name="London" selected>London</option>
+        <option name="New York">New York</option>
+        <option name="LA">LA</option>
+    </select>
+
+    <hr>
+    <h2>Form relocation</h2>
+
+    <form action="formSuccessScreen.html" target="blank">
+        <fieldset>
+            <legend>Create user data</legend>
+            
+            <input type="text" name="userName" palceholder="enter you name" required>
+            <br><br>
+            <input type="number" name="userAge" placeholder="you age" required> 
+            <br><br>
+            <input type="date" name="timeData" placeholder="enter data" required>
+            <br><br>
+            <input type="color" name="userColor" required>
+            <br><br>
+            <textarea name="textareaValue" required>
+
+            </textarea>
+            <br><br>
+            
+            <input type="submit" value="Send form">
+
+        </fieldset>
+    </form>
+
+    <hr>
+    <h2>Forms inside js Conver to object</h2>
+
+    <form name="userCreatorForm">
+        <fieldset>
+            <legend>Create user</legend>
+            <label>
+                <p>User Name *</p>
+                <input type="text" name="userName" required placeholder="enter you name" />
+            </label>
+            <label>
+                <p>User Name *</p>
+                <input type="mail" name="userEmail" required placeholder="enter you email" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" />
+            </label>
+            <br><br>
+
+            
+            <label>
+                <p>Favorite car</p>
+                <span>Bmw</span>
+                <input type="radio" name="favoriteCar" value="BMW" checked required>
+                <span>Mercedes</span>
+                <input type="radio" name="favoriteCar" value="Mercedes" required>
+                <span>Tesla</span>
+                <input type="radio" name="favoriteCar" value="Tesla" required>
+                <span>Volvo</span>
+                <input type="radio" name="favoriteCar" value="Volvo" required>
+            </label>
+            <label>
+                <p>User Walk distance *</p>
+                <p id="user-walks-count"></p>
+                <input id="user-walks" type="range" name="userWalks" required min="0" max="20000" value="100" />
+            </label>
+            <br><br>
+
+
+            <button type="submit"> Create user</button>
+        </fieldset>
+    </form>
+
+
+    <h4>All users</h4>
+    <ol id="user-list-area"></ol>
+
+
+
+<script src="./script.js"></script>
+</body>
+</html>
