@@ -71,6 +71,7 @@ h1 {
 .avatar-icon {
     margin: 0 auto;
     display: block;
+    border-radius: 50%;
 } 
 .user-form-wrapper form fieldset {
     border-radius: 20px;
@@ -125,6 +126,7 @@ body.user-area-background {
     align-items: center;
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
+    overflow: hidden;
 }
 .user-list-wrapper li:nth-child(even) {
     background: #b0afb3;
@@ -154,4 +156,7 @@ body.user-area-background {
     color:rgb(7, 6, 6);
     margin-top: 20px;
     padding: 20px;
+}
+.user-card img{
+    border-radius: 50%;
 }

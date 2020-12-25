@@ -124,16 +124,21 @@
             case "left":
                 console.log("left")
                 changePictureId(-1, galleryDb)
+                refresh()
                 break
             case "right":
                 console.log("right")
                 changePictureId(1, galleryDb)
+                refresh()
                 break
         }
-        displayImage( 
-            galleryDb.galleryImages[galleryDb.currentImageIndex], 
-            galleryDb.selectors.pictureArea 
-        )
+        
+        function refresh(){
+            displayImage( 
+                galleryDb.galleryImages[galleryDb.currentImageIndex], 
+                galleryDb.selectors.pictureArea 
+            )   
+        }
     })
 
     setInterval(() => { 
@@ -151,7 +156,6 @@
         let seconds = seasonDate.getSeconds();
 
         const currentMontObject = timeDB[month];
-            ///console.log(currentMontObject)
 
         let timeString = `
             <h2>${year} ${currentMontObject.monthName}</h2>
