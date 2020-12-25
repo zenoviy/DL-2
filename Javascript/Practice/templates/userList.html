@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User list</title>
+    <link href="../css/style.css" rel="stylesheet">
+</head>
+<body class="user-area-background">
+    <nav class="app-navigation-menu">
+        <div class="app-container">
+            <ul class="navigation">
+                <li>
+                   <a href="../index.html"> Home</a>
+                </li>
+                <li>
+                    <a href="./gallery.html" >Gallery</a>
+                </li>
+                <li>
+                    <a href="#" class="active">Users</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="app-top-pad">
+        <section class="app-container">
+           <h1>
+                User list
+            </h1> 
+            <div class="user-list-body">
+                <div class="user-form-wrapper">
+                    <h4>Form</h4>
+                    <form name="mainUserForm">
+                        <fieldset>
+                            <legend>User form</legend>
+                            <label class="required-style">
+                                <p>User name * </p>
+                                <input type="text" name="userName" placeholder="User name" required maxlength="3" maxlength="20">
+                            </label>
+                            <label class="required-style">
+                                <p>User email * </p>
+                                <input type="email" name="userEmail" placeholder="User email" required pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                            </label>
+                            <label class="required-style">
+                                <p>User password * </p>
+                                <input type="text" name="userPassword" placeholder="Create your password" required  maxlength="20" maxlength="5">
+                            </label>
+                            <label>
+                                <p>User color</p>
+                                <input type="color" value="#8907C1" name="userColor" >
+                            </label>
+                            <label >
+                                <img width=150 id="avatar-icon" class="avatar-icon" src="https://cdn.icon-icons.com/icons2/1378/PNG/512/avatardefault_92824.png" alt="avatar">
+                                <p>User Avatar</p>
+                                <input id="avatar-input" type="file" name="userPicture" >
+                            </label>
+                            <br>
+                            <button type="submit">Create user</button>
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="user-list-wrapper">
+                    <ol id="user-displa-area"></ol>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    
+    
+    
+    <script src="../js/script.js"> </script>
+</body>
+</html>

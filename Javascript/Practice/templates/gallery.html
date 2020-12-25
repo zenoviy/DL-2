@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link href="../css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/gallery-style.css">
+</head>
+<body>
+    <nav class="app-navigation-menu">
+        <div class="app-container">
+            <ul class="navigation">
+                <li>
+                   <a href="../index.html"> Home</a>
+                </li>
+                <li>
+                    <a href="#" class="active">Gallery</a>
+                </li>
+                <li>
+                    <a href="./userList.html">Users</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <main class="app-top-pad">
+        <section class="app-container">
+            <h1>
+                Gallery
+            </h1>
+            <div id="time-area" class="time-area">Time</div>
+
+            <div class="gallery-field">
+                <button class="btn left-btn" data-gallery-button="left">&#8249;</button>
+                <div class="picture-area" id="picture-area"></div>
+                <button class="btn right-btn" data-gallery-button="right">&#8250;</button>
+            </div>
+        
+        </section>
+    </main>
+    <script src="../js/galleryScript.js"> </script>
+</body>
+</html>

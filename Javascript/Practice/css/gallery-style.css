@@ -1,0 +1,61 @@
+body {
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+.gallery-field {
+    background: rgb(24, 0, 68);
+    display: flex;
+    height: 450px;
+
+    border-radius: 50px;
+}
+.gallery-field .picture-area {
+    width: 90%;
+    background: rgb(103, 6, 141);
+    position: relative;
+    overflow: hidden;
+}
+.gallery-field .picture-area img {
+    width: 100%;
+    
+}
+.time-area {
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(270deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.9) 50%, rgba(0,0,0,0) 100%); 
+}
+.gallery-field button {
+    width: 5%;
+    cursor: pointer;
+    font-size: 40px;
+    background:rgb(224, 220, 197);
+    border: 3px solid rgb(209, 59, 0);
+}
+button.left-btn {
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+button.right-btn {
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+.image-decscription {
+    position: absolute;
+    background: linear-gradient(180deg, rgba(0,0,0,.6) 0%, rgba(0,0,0,0) 100%);
+    width: 100%;
+    color: #fff;
+    padding: 20px;
+    z-index: 10;
+    text-align: center;
+}
+.gallery-image {
+    opacity: 0;
+    animation: picture-appear .5s linear forwards;
+}
+
+@keyframes picture-appear {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
