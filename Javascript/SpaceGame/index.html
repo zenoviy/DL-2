@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    
+    <section class="game-wrapper">
+        <div id="menu-wrapper" class="menu-wrapper">
+            <div class="menu-body">
+                <h2>Menu</h2>
+                <h4>Settings</h4>
+                <p id="sound-level-display"></p>
+                <input id="sound-level-input" type="range" max="100" min="0">
+                <div id="game-settings"></div>
+                <button data-game-btn="start" class="btn main-btn">Start</button>
+            </div>
+        </div>
+        <canvas id="game-area"></canvas>
+    </section>
+    <script src="./js/script.js"></script>
+</body>
+</html>
