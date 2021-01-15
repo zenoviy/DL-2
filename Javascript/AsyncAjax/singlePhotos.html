@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Photo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark menu-fixed">
+            <div class="container">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+                </div>
+            </div>
+        </nav>
+
+    
+    <main class="pt-5">
+        <section id="single-news-area" class="container pt-4">
+            <h1>Single photo</h1>
+        </section>
+    </main>
+
+    <hr/>
+    <footer class="app-footer">
+        <div class="container footer-content">
+            <h5>2021</h5>
+        </div>
+    </footer>
+
+<script>
+    const API_KEY = "EHjkmqZNbtm8BGKksaJterFHyGuaxEx0o7ub6cpW";
+    const MARS_PHOTO = "/mars-photos/api/v1/rovers/curiosity/photos";
+    const HOST = "https://api.nasa.gov"
+
+    const target = document.querySelector("#single-news-area");
+    let = searchQueryObject = {};
+    
+    getPageQueryParams()
+    function getPageQueryParams(){
+        let search = new URLSearchParams(location.search);
+
+        for(let [key, val] of search.entries()){
+            searchQueryObject[key] = val
+        }
+        console.log(searchQueryObject)
+        getMarsPhotos({
+            HOST,
+            MARS_PHOTO,
+            API_KEY,
+            camera: searchQueryObject.cameraName,
+            sol: searchQueryObject.sol,
+            id: searchQueryObject.id
+        })
+        
+    }
+    function getMarsPhotos(props) {
+        let url = `${props.HOST}${props.MARS_PHOTO}?camera=${props.camera}&sol=${props.sol}&api_key=${props.API_KEY}`;
+        console.log(url)
+        fetch(url)
+        .then(data => data.json())
+        .then(result => {
+            let targetPhoto = result.photos.find(item => item.id == props.id)
+            console.log(targetPhoto)
+            target.innerHTML = `
+                <div class="media-area p-2">
+                    <img src=${targetPhoto.img_src} width="100%">
+                    <a href=${targetPhoto.img_src} target="blank">${targetPhoto.img_src}</a>
+                </div>
+                <div class="description-area p-2">
+                    <h1>${targetPhoto.rover.name} photo</h1>
+                    <p>${targetPhoto.camera.full_name} during Sol: ${targetPhoto.sol}</p>
+                    <date>Date ${targetPhoto.earth_date.replaceAll("-", "/")}</date>
+                    <ul>
+                        <li>Sol: ${targetPhoto.sol}</li>    
+                        <li>Status: ${targetPhoto.rover.status}</li>  
+                        <li>Earth Date: ${targetPhoto.earth_date.replaceAll("-", "/")}</li>    
+                        <li>Camera: ${targetPhoto.camera.full_name}  ${targetPhoto.camera.name}</li>  
+                        <li>Status: ${targetPhoto.rover.status}</li>  
+                    </ul>
+                </div>
+            `
+        })
+        .catch(err => console.error(err))
+    }
+</script>
+</body>
+</html>

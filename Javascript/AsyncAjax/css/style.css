@@ -1,0 +1,67 @@
+.menu-fixed {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+.news-background {
+    background: rgb(99, 97, 102);
+    height: 300px; 
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.main-news-area {
+    background: #ffffff;
+    margin-top: -100px;
+    min-height: 200px;
+}
+
+.main-news-area .main-news-wrapper, #single-news-area {
+    display: flex;
+
+}
+.main-news-area .main-news-wrapper .media-area img, 
+.card img {
+    width: 100%;
+}
+.card img {
+    height: 250px;
+}
+.main-news-area .main-news-wrapper .media-area, 
+.media-area {
+    width: 40%;
+}
+.main-news-area .main-news-wrapper .description-area, 
+.description-area {
+    width: 60%;
+}
+.card {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.39);
+}
+.card-wrapper {
+    /*width: calc(100%/4);*/
+}
+.card-main-wrapper {
+    min-height: 300px;
+    width: 100%;
+}
+.photo-btn {
+    width: 100%;
+    display: block;
+    z-index: 5;
+    position: relative;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.39);
+}
+.app-footer {
+    background: rgb(236, 236, 236);
+    height: 100px;
+}
+
+.app-footer .footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(104, 104, 104);
+    height: 100%;
+}
