@@ -19,7 +19,7 @@
 
 .main-news-area .main-news-wrapper, #single-news-area {
     display: flex;
-
+    flex-wrap: wrap;
 }
 .main-news-area .main-news-wrapper .media-area img, 
 .card img {
@@ -64,4 +64,14 @@
     align-items: center;
     color: rgb(104, 104, 104);
     height: 100%;
+}
+@media screen and (max-width: 650px){
+    .main-news-area .main-news-wrapper .media-area, 
+    .media-area {
+        width: 100%;
+    }
+    .main-news-area .main-news-wrapper .description-area, 
+    .description-area {
+        width: 100%;
+    }
 }
