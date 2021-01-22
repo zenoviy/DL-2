@@ -1,0 +1,9 @@
+<div class="app-container">
+    <h1>{{title}}</h1>
+    <ol>
+        {{#each userData}}
+            <li>{{this.name}} <button onclick="showId({{this.id}})">Show Id</button></li>
+        {{/each}}
+    </ol>
+</div>
+    

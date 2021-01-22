@@ -9,13 +9,57 @@ const path = require('path');
 const cors = require('cors');
 const os = require('os');
 const fs = require('fs');
+const bodyParser = require('body-parser');
+const exphbs  = require('express-handlebars');
+
+
+const getUSers = require('./business/getUsers').getUSers;
+const postUsers = require('./business/postUsers').postUsers;
+const deleteUser = require('./business/delateUsers').deleteUser;
 
 process.env.HOST = '127.0.0.1';
 process.env.PORT = '3500';
 
-
 const app = express();
-//app.use(express.static(path.join(__dirname + '/public')));
+const hbs = exphbs.create({
+    extname: '.handlebars',
+    partialsDir: __dirname + '/views/partials',
+    defaultLayout: 'main.handlebars'
+});
+
+app.engine('handlebars', hbs.engine);
+app.set('view engine', 'handlebars');
+
+app.use("/hbs-home", express.static(path.join(__dirname + '/public/hbs-style')));
+app.get('/hbs-home', (req, res) => {
+    res.render('home', {
+        title: 'home page',
+        id: 12,
+        footerType: true
+    })
+})
+app.use("/hbs-about", express.static(path.join(__dirname + '/public/hbs-style')));
+app.use("/hbs-about", express.static(path.join(__dirname + '/public/hbs-script')));
+app.get('/hbs-about', (req, res) => {
+    const userDataLink = path.join(__dirname +'/public/db');
+    if(fs.existsSync(userDataLink + '/userData.json')){ 
+       fs.readFile(userDataLink + '/userData.json', (err, data) => { 
+            let pageData = {
+                title: 'about',
+                userData: JSON.parse(data),
+                footerType: false
+            }
+            return res.render('about', pageData)
+        })
+    } else {
+       res.render('about', { 
+            title: 'about',
+            userData: [],
+            footerType: false
+        }) 
+    }
+    
+})
 
 /*
     Роутер привязка до домашньої сторінки http://localhost:3500/ 
@@ -49,6 +93,17 @@ app.get("/static-users", cors(), (req, res) => {
     }
 });
 
+
+/*
+    CRUD методи добавляє юзерів з клієнта і зберігає в файл .json 
+*/
+app.use("/api/app-users", cors());
+app.use("/api/app-users", express.static(path.join(__dirname + '/public/db')));
+
+app.route("/api/app-users")
+    .get( getUSers)
+    .post(bodyParser.json(), postUsers)
+    .delete( deleteUser)
 
 /*
 app.get("/home", (req, res) => {

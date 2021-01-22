@@ -7,6 +7,11 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
+    <nav>
+        <ul>
+            <li><a href="/hbs-home">To handlebars</a></li>
+        </ul>
+    </nav>
     <main>
         <section class="main-container">
             <h1> Welcome to Node Page </h1>
@@ -14,6 +19,30 @@
                 в свою чергу html також передається з нашого сервера <mark>http://localhost:3500/</mark>
                 
             </p>
+            <form name="main-user-form">
+                <fieldset>
+                    <legend>User Form</legend>
+                    <label>
+                        <p>Use Name</p>
+                        <input type="text" name="name" placeholder="User Name" required>
+                    </label>
+                    <label>
+                        <p>Use Email</p>
+                        <input type="email" name="email" placeholder="User Email" required>
+                    </label>
+                    <label>
+                        <p>Use Password</p>
+                        <input type="password" name="password"  placeholder="User Password" required>
+                    </label>
+
+                    <hr>
+                    <input type="submit" value="Create user">
+                </fieldset>
+            </form>
+
+
+
+
             <ol id="user-list"></ol>  
         </section>
         

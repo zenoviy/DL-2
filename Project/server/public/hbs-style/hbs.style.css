@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    color: blue;
+}
+
+.main-menu {
+    background:rgb(53, 41, 73);
+    color: #ffffff;
+}
+.main-menu ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    padding: 10px;
+}
+.main-menu ul a{
+    padding: 10px;
+    color: #ffffff;
+}
+.app-container {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+.footer {
+   
+    min-height: 200px;
+    padding: 20px;
+}
+.dark-footer {
+     background: rgb(53, 41, 73);
+    color: #ffffff;
+}
+.light-footer {
+    background: rgb(159, 151, 161);
+    color: #211630;
+}
