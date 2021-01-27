@@ -1,0 +1,21 @@
+.header-menu {
+    background: rgb(2, 2, 124);
+    width: 100%;
+}
+.header-menu ul{
+    display: flex;
+    list-style: none;
+}
+.header-menu ul li {
+    padding: 20px 0 20px 0;
+}
+.header-menu ul li a{
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 20px ;
+}
+.header-menu ul li a.active-link {
+    background: #fff;
+    color: rgb(2, 2, 124);
+}

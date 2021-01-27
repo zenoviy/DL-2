@@ -105,6 +105,22 @@ app.route("/api/app-users")
     .post(bodyParser.json(), postUsers)
     .delete( deleteUser)
 
+
+app.use("/get-product", cors());
+app.use( express.static(path.join(__dirname + '/public')));
+app.get("/get-product", (req, res) => {
+    const userDataLink = path.join(__dirname +'/public/db');
+    if(!fs.existsSync(userDataLink + '/product.json')){ 
+        return res.send({text: "No users at this moment!"})
+    };
+    fs.readFile(userDataLink + '/product.json', (err, data) => { 
+        if(err) return res.send({text: err})
+
+        const productData = JSON.parse(data);
+        res.setHeader('Content-type', 'application/json');
+        res.status(200).send(JSON.stringify({dataBody: productData}));
+    });
+});    
 /*
 app.get("/home", (req, res) => {
     res.send("<h1>Home Page</h1>")

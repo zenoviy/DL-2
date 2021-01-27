@@ -1,0 +1,18 @@
+<p>home-page works!</p>
+<h4>{{ helloWord }}</h4>
+<h3> Clicks {{ clickCounter }}</h3>
+<button (click)="makeClick()">click +1</button>
+
+
+<h4>{{ pageText ? pageText : "No Text yet" }}</h4>
+<input type="text" [(ngModel)]="pageText" (keyup)="changePageText($event)">
+
+<div class="color-box" [class.isRedClass]="isRed"></div>
+<div class="color-box" [class.isRedClass]="!isRed"></div>
+<div class="color-box" [style.backgroundColor]="isRed ? 'blue' : 'yellow' "></div>
+
+
+<input type="checkbox" [(ngModel)]="isRed" [checked]="isRed" (change)="changeBoxEvent($event)">
+
+
+<app-details-component [makeClickCounter]="clickCounter" (makeClick)="makeDecreaseClick()"></app-details-component>

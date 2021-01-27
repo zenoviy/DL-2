@@ -1,0 +1,15 @@
+
+<nav class="header-menu">
+  <ul class="app-container">
+    <li><a routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">Home</a></li>
+    <li><a routerLink="/about" routerLinkActive="active-link">About</a></li>
+    <li><a routerLink="/shop" routerLinkActive="active-link">Shop</a></li>
+    <li><a routerLink="/users" routerLinkActive="active-link">Users</a></li>
+  </ul>
+</nav>
+
+<div class="app-container">
+  <h4>App Root componet</h4>
+  <router-outlet></router-outlet>
+</div>
+<app-footer-component></app-footer-component>
