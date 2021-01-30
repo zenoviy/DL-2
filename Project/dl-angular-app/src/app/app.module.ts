@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -19,12 +19,17 @@ import { UserPageComponent } from './user-page/user-page.component';
 import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
 import { DetailsComponentComponent } from './home-page/details-component/details-component.component';
 import { FooterComponentComponent } from './footer-component/footer-component.component';
+import { ImageFormatPipe } from './pipes/image-format.pipe';
+import { LinkNameFormatPipe } from './pipes/link-name-format.pipe';
+import { ShopSinglePageComponent } from './shop-page/shop-single-page/shop-single-page.component';
+import { ShopSidePanelComponent } from './shop-page/shop-side-panel/shop-side-panel.component';
 
 
 const router: Routes = [
   { path: '', component: HomePageComponent }, 
   { path: 'about', component: AboutPageComponent },
   { path: 'shop', component: ShopPageComponent },
+  { path: 'shop/:name', component: ShopSinglePageComponent },
   { path: 'users', component: UserPageComponent },
   { path: '**', component: NotFoundPageComponent }
 
@@ -40,15 +45,22 @@ const router: Routes = [
     UserPageComponent,
     NotFoundPageComponent,
     DetailsComponentComponent,
-    FooterComponentComponent
+    FooterComponentComponent,
+    ImageFormatPipe,
+    LinkNameFormatPipe,
+    ShopSinglePageComponent,
+    ShopSidePanelComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(router),
     HttpClientModule
   ],
-  providers: [AppStateService, ServerRequestService],
+  providers: [
+    AppStateService, 
+    ServerRequestService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

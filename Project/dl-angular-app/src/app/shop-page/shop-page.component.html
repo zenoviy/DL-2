@@ -1,9 +1,14 @@
 <p>shop-page works!</p>
-
-<ul  >
-    <li *ngFor="let product of allProduct">
-        <div *ngIf="product">
-            <h3>{{product.title}}</h3>
-        </div>
-    </li>
-</ul>
+<div class="product-area main-content-padding-area">
+    <ul>
+        <li *ngFor="let product of allProduct" class="product-card">
+            <div *ngIf="product" class="card-inner">
+                <a routerLink="/shop/{{ product.name | linkNameFormat: product.id }}" [queryParams] ='{id: product.id}'>
+                   <img src="{{ product.image[0] | imageFormat: appState._HOST }}" alt={{product.name}}>
+                    <h4>{{product.name}}</h4>
+                    <h4>{{product.price | currency: product.currency  }}</h4> 
+                </a>
+            </div>
+        </li>
+    </ul>
+</div>

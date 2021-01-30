@@ -15,7 +15,8 @@ export class AppStateService {
     this.isRed = false;
     this._HOST = "http://localhost:3500";
     this.apiParams = {
-      getProduct: this['_HOST'] + '/get-product'
+      getProduct: this['_HOST'] + '/get-product',
+      usersApi: this['_HOST'] +  '/api/app-users'
     }
   }
 }

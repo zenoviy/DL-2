@@ -1,0 +1,17 @@
+ul {
+    padding: 0px;
+    list-style: none;
+}
+ul li a img {
+    width: 100%;
+}
+ul li {
+    padding: 5px;
+}
+.select-panel-product {
+    background: orange;
+    
+}
+.select-panel-product a {
+    color: #fff;
+}

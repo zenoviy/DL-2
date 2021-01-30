@@ -1,0 +1,32 @@
+<!--currentProduct-->
+<div *ngIf="currentProduct; else noProduct" class="single-page-wrapper">
+    <div class="product-area">
+        <div class="media-area">
+            <div class="main-picture">
+                <img src="{{ titlePicture | imageFormat: appStateService._HOST }}">
+            </div>
+            <div  class="product-gallery">
+                <div *ngFor="let prodPicture of currentProduct.image" [class.selected-picture]="titlePicture === prodPicture" class="single-image-in-gallery" (click)="selectGalleryPicture(prodPicture)">
+                    <img src="{{ prodPicture | imageFormat: appStateService._HOST }}">
+                </div>
+            </div>
+        </div>
+        <div class="product-description-area">
+            <h1>{{ currentProduct.name }}</h1>
+            <h3>{{ currentProduct.title }}</h3>
+            <p>{{ currentProduct.shortDescription }}</p>
+            <p>{{ currentProduct.description }}</p>
+            <h3>{{ currentProduct.price | currency: currentProduct.currency }}</h3>
+            <p>{{ currentProduct.detailDescription }}</p>
+        </div>
+    </div>
+    <div class="side-panel">
+        <app-shop-side-panel *ngIf="allProducts && allProducts.length"
+        [allProducts]="allProducts" [currentProduct]="currentProduct" [host]="appStateService._HOST"></app-shop-side-panel>
+    </div>
+</div>
+<ng-template #noProduct>
+    <h1>No Product</h1>
+</ng-template>
+
+

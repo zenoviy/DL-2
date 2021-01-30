@@ -1,0 +1,34 @@
+.product-area {
+    display: flex;
+    width: 80%;
+}
+.side-panel {
+    width: 20%;
+}
+
+.product-area .media-area {
+    width: 40%;
+}
+.product-area .media-area .main-picture img,
+.single-image-in-gallery img {
+    width: 100%;
+    height: 100%;
+}
+.product-area .product-description-area {
+    width: 60%;
+    padding: 20px;
+}
+.single-page-wrapper,
+.product-gallery {
+    display: flex;
+    flex-wrap: wrap;
+}
+.product-gallery .single-image-in-gallery {
+    width: calc(100% / 3);
+    padding: 4px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.selected-picture {
+    background: orange;
+}

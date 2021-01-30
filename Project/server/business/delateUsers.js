@@ -13,16 +13,17 @@ const deleteUser = (req, res) => {
 
         let convertData = JSON.parse(data)
         const headers = req.headers;
-        console.log(headers['user-id'])
+        console.log(headers, headers['user-id'], "Header")
         let targetUser = convertData.find(user => user.id == headers['user-id']);
-        if(!targetUser) res.send({text: 'USer not Exist'})
+        if(!targetUser) return res.send({text: 'USer not Exist'});
 
         let userIndex = convertData.indexOf(targetUser);
         convertData.splice(userIndex, 1);
         fs.writeFile(userDataLink + '/userData.json', JSON.stringify(convertData), err => {
-            return res.send({text: err})
+            if(err) return res.send({text: err})
+            return res.send({text: 'Delete user'})
         })
-        res.send({text: 'Delete user'})
+        
     })
     // headers   // userId
 }
