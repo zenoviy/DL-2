@@ -70,7 +70,8 @@ app.get("/",  (req, res) => {
     console.log(os.hostname())
     let link = path.join(__dirname, "/public/page/index.html");
     res.sendFile(link);
-});
+});/**/
+
 
 /*
     Запит на читання з локального документа staticUsers.json
@@ -131,6 +132,19 @@ app.get("/about", (req, res) => {
 app.get("/about/contacts", (req, res) => {
     res.send("<h1>About Contacts Page</h1>")
 });*/
+
+
+/*
+    Цей закоменчений код запускає збілджену версію додатку
+    по localhost:3500  можна бе попасти в додаток
+*/
+/*
+app.use(express.static(path.join(__dirname, "public/www/dl-angular-app")));
+app.use((req, res, next) => {
+    res.sendFile(path.join(__dirname, "/public/www/dl-angular-app", "index.html"));
+});
+*/
+
 
 app.listen(process.env.PORT, () => {
     console.log(`App is running at ${process.env.HOST}  Port: ${process.env.PORT}`)
