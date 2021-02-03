@@ -1,0 +1,23 @@
+.main-app-menu {
+    background: rgb(2, 2, 124);
+    width: 100%;
+}
+.main-app-menu ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+}
+.main-app-menu ul, 
+.main-app-menu a {
+    padding: 20px;
+}
+.main-app-menu a {
+    color: #fff;
+    text-decoration: none;
+}
+.active-link {
+    background: #fff;
+}
+a.active-link {
+    color: rgb(2, 2, 124);
+}

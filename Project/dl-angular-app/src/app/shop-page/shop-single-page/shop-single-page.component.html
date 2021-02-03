@@ -17,7 +17,7 @@
             <p>{{ currentProduct.shortDescription }}</p>
             <p>{{ currentProduct.description }}</p>
             <h3>{{ currentProduct.price | currency: currentProduct.currency }}</h3>
-            <p>{{ currentProduct.detailDescription }}</p>
+            <p [innerHTML]="currentProduct.detailDescription"></p>
         </div>
     </div>
     <div class="side-panel">

@@ -1,0 +1,15 @@
+.box {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #bbb;
+}
+
+.red-box {
+    background-color: crimson;
+}
+.yellow-box {
+    background-color: yellow;
+}
+.blue-box {
+    background-color: blue;
+}
