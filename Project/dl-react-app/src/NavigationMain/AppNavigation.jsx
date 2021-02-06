@@ -15,6 +15,8 @@ import ShopPageComponent from '../ShopPage/ShopPageMainComponent'
 import UserPageComponent from '../UserPage/UserComponemt'
 import NotFoundPageComponent from '../NotFoundPage/NotFoundPageComponent'
 
+import ShopSinglePageComponent from '../ShopPage/ShopSinglePage/ShopSinglePageComponent'
+
 
 const AppMainNavigation = props => {
     return(
@@ -47,6 +49,9 @@ const AppMainNavigation = props => {
                     </Route>
                     <Route exact path="/shop-page">
                         <ShopPageComponent />
+                    </Route>
+                    <Route exact path="/shop-page/:name">
+                        <ShopSinglePageComponent />
                     </Route>
                     <Route exact path="/user-page">
                         <UserPageComponent />

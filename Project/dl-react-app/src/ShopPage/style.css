@@ -1,0 +1,73 @@
+.shop-products-wrapper, 
+.shop-wrapper,
+.shop-wrapper .page-text-body,
+.shop-wrapper .page-text-body .media-area .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.shop-products-wrapper .product-card {
+    width: calc(100% / 4);
+    padding: 5px;
+    box-sizing: border-box;
+}
+.shop-products-wrapper 
+.product-card 
+.product-card-inner {
+    padding: 5px;
+    box-shadow: 2px 2px 10px #bbb;
+    border-radius: 5px;
+}
+.product-card img {
+    width: 100%;
+}
+
+.product-card .product-price::after {
+    content: '$'
+}
+
+
+/* Sahop single page*/
+.shop-wrapper .page-text-body .media-area {
+    width: 40%;
+}
+.shop-wrapper .page-text-body .text-area {
+    width: 60%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.shop-wrapper .page-text-body .media-area .main-image img,
+.shop-wrapper .page-text-body .media-area .gallery img,
+.side-panel-card img {
+    width: 100%;
+    height: 100%;
+}
+.shop-wrapper .page-text-body .media-area .gallery-image-wrapper {
+    width: calc(100% / 3);
+    padding: 3px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.selected-image {
+    background: orange;
+}
+.selected-image a {
+    color: #ffffff;
+}
+
+
+/* Side panel  */
+
+.side-panel {
+    width: 20%;
+}
+.side-panel ul {
+    list-style: none;
+}
+.page-text-body {
+    width: 80%;
+}
+.side-panel-card {
+    padding: 5px;
+}

@@ -1,0 +1,57 @@
+.user-body-wrapper {
+    display: flex;
+}
+.user-body-wrapper .user-form-wrapper {
+    width: 40%;
+
+}
+.user-body-wrapper .user-list-wrapper {
+    width: 60%;
+    
+}
+
+.user-form-wrapper form {
+    width: 100%;
+}
+.user-body-wrapper .user-form-wrapper input {
+    width: 80%;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid rgb(122, 0, 179);
+}
+.user-body-wrapper .user-form-wrapper input[type=submit] {
+    background: rgb(122, 0, 179);
+    color: #ffffff;
+    margin-top: 40px;
+    cursor: pointer;
+} 
+.user-body-wrapper .user-form-wrapper p {
+    color: red;
+    font-size: 10px;
+}
+
+.user-body-wrapper  .user-list-wrapper ul li {
+    background-color: rgb(236, 236, 236);
+    margin-top: 3px;
+    padding: 10px;
+    box-sizing: border-box;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+.user-body-wrapper  .user-list-wrapper ul li:nth-child(even) {
+    background-color: #c6c5ca;
+}
+.user-body-wrapper  .user-list-wrapper ul li h4 {
+    margin: 0;
+}
+.user-body-wrapper  .user-list-wrapper ul li button {
+    background: red;
+    color: #ffffff;
+    padding: 5px;
+    border: 0px;
+    cursor: pointer;
+}
+

@@ -16,7 +16,8 @@ export default class HomePageComponent extends Component {
         this.state = {
             clickCounter: 0,
             homeInputText: '',
-            isRed: false
+            isRed: false,
+            count: 0
         }
         
         this.increseClickHandler = this.increaseClicks.bind(this);
@@ -25,7 +26,7 @@ export default class HomePageComponent extends Component {
     }
 
     componentDidMount(){
-        console.log("component Did Mount")
+        console.log(`component Did Mount ${this.state.count}`)
     }
     componentWillMount(){
         console.log("component Will Mount")
@@ -34,7 +35,7 @@ export default class HomePageComponent extends Component {
         console.log("component Will Update")
     }
     componentDidUpdate(){
-        console.log("component Did Update")
+        console.log(`component Did Update  ${this.state.count}`)
     }
     componentWillUnmount(){
         console.log("component Will Unmount")
@@ -77,6 +78,8 @@ export default class HomePageComponent extends Component {
             <Fragment>
                 <div className="app-container">
                     <h1>Home Component</h1>
+                    <p>Ви натиснули {this.state.count} разів</p>
+                    <button onClick={() => this.setState({ count: this.state.count + 1 })}>counter</button>
                     <p>{ this.helloWords ? this.helloWords : 'No hello words!' }</p>
 
                     <h2>Clicks: {clicks} </h2>

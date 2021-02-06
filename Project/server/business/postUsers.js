@@ -10,7 +10,7 @@ const postUsers = (req, res) => {
     if(!fs.existsSync(userDataLink + '/userData.json')){
          fs.writeFile(userDataLink + '/userData.json', JSON.stringify([].concat(req.body)), err => {
             console.log(err)
-            if(err) return res.send({text: `Error has been occured on first writing: ${err}`})
+            if(err) return res.send({text: `Error has been occured at first writing: ${err}`})
             return res.send({text: "First user was Created"})
         });    
     }
@@ -22,7 +22,7 @@ const postUsers = (req, res) => {
         convertData = convertData.concat(req.body);
         
         fs.writeFile(userDataLink + '/userData.json', JSON.stringify(convertData), err => {
-            if(err) return res.send({text: `Error has been occured on writing: ${err}`})
+            if(err) return res.send({text: `Error has been occured at writing: ${err}`})
 
             return res.status(201).send({text: "User was successfully saved!!!"})
         });
