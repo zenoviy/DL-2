@@ -27,7 +27,6 @@ const UserForm = props => {
         <div className="user-form-wrapper">
             <form onSubmit={(e) => { 
                 e.preventDefault(); 
-                //createUser(e.target, props.setUsers, props.appData);
                 const userData = convertFormToData(e.target);
                 if(!userData) return
 
@@ -50,8 +49,7 @@ const UserForm = props => {
                 <br></br>
                 <input type="submit" value="create user"/>
             </form>
-        </div>
-            
+        </div>     
     )
 }
 
